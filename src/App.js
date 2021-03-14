@@ -47,7 +47,7 @@ const App = () => {
               
                   {/* Displays image of each character + adds an additional class (character-img) so I can customize in my CSS file*/}
                   <img
-                    src={pic.photoUrl}
+                    src={pic.message}
                     className="img-fluid character-img"
                     alt="dog"
                   ></img>
