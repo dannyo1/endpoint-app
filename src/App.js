@@ -5,9 +5,10 @@ import { app_background } from "./data/markdown";
 // import your custom data fetching function
 // TODO: add a data fetching function to the api.js file in the endpoints folder
 import { getAllAvatarCharacters } from "./data/endpoints";
+import { getDogPictures } from "./data/endpoints";
 
 const App = () => {
-  const [characters, setCharacters] = useState(null);
+  const [pictures, setPictures] = useState(null);
 
   /**
    * TODO: modify this useEffect to pass as many params as you want
@@ -15,12 +16,12 @@ const App = () => {
    * - you could also create more state variables to handle multiple params for your endpoint / user input
    */
   useEffect(() => {
-    if (!characters) {
+    if (!pictures) {
       // if our characters is null, fetch some data!
-      getAllAvatarCharacters(setCharacters);
+      getDogPictures(setPictures);
     }
     // don't forget to add every state variable you're monitoring to this array!
-  }, [characters]);
+  }, [pictures]);
 
   return (
     <div className="home">
@@ -40,28 +41,20 @@ const App = () => {
              * - in this case, if characters is null, it displays "No characters"
              * - otherwise, it maps through characters and renders info for each person!
              */}
-            {characters ? (
-              characters.map((char, idx) => (
-                <div className="col-3 character" key={idx}>
-                  {/* Displays name of each character */}
-                  <h2 className="name">{char.name}</h2>
+            {pictures ? (
+              pictures.map((pic, idx) => (
+                <div className="col-3 dog" key={idx}>
+              
                   {/* Displays image of each character + adds an additional class (character-img) so I can customize in my CSS file*/}
                   <img
-                    src={char.photoUrl}
+                    src={pic.photoUrl}
                     className="img-fluid character-img"
-                    alt="character icon"
+                    alt="dog"
                   ></img>
-                  <div className="character-description">
-                    {/* Displays list of each character's allies (stored in an array within the char object called allies) */}
-                    <h4>Allies</h4>
-                    {char.allies.map(
-                      (a, idx) => a.length > 1 && <li key={idx}>{a}</li>
-                    )}
-                  </div>
                 </div>
               ))
             ) : (
-              <div>No Characters</div>
+              <div> No Dogs :-( </div>
             )}
           </div>
         </div>

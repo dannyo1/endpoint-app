@@ -29,3 +29,17 @@ export const getAllAvatarCharacters = async (setCharacters) => {
  * - from there, decide what part of res.data to pass to your function parameter (in this case, I passed the entire thing!)
  * - I also deleted my custom CSS from the index.css file so feel free to have fun & play around with the look of your app!
  */
+
+ export const getDogPictures = async (setPictures) => {
+
+    const url = 'https://dog.ceo/api/breeds/image/random/2';
+    return axios
+      .get(url)
+      .then((res) => {
+        setPictures(res.data);
+      })
+      .catch((e) => { 
+        console.log(e);
+      })
+
+ };
