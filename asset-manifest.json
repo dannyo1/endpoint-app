@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/endpoint-app/static/css/main.5f431ba7.chunk.css",
-    "main.js": "/endpoint-app/static/js/main.9788c435.chunk.js",
-    "main.js.map": "/endpoint-app/static/js/main.9788c435.chunk.js.map",
+    "main.js": "/endpoint-app/static/js/main.30de1082.chunk.js",
+    "main.js.map": "/endpoint-app/static/js/main.30de1082.chunk.js.map",
     "runtime-main.js": "/endpoint-app/static/js/runtime-main.783f30e6.js",
     "runtime-main.js.map": "/endpoint-app/static/js/runtime-main.783f30e6.js.map",
     "static/css/2.150d169a.chunk.css": "/endpoint-app/static/css/2.150d169a.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.150d169a.chunk.css",
     "static/js/2.cacc465c.chunk.js",
     "static/css/main.5f431ba7.chunk.css",
-    "static/js/main.9788c435.chunk.js"
+    "static/js/main.30de1082.chunk.js"
   ]
 }
