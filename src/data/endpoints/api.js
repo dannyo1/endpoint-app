@@ -32,14 +32,17 @@ export const getAllAvatarCharacters = async (setCharacters) => {
 
  export const getDogPictures = async (setPictures) => {
 
-    const url = 'https://dog.ceo/api/breeds/image/random/2';
+    const url = 'https://randomfox.ca/floof/';
     return axios
       .get(url)
       .then((res) => {
-        setPictures(res.data);
+        console.log("pics:", res.data);
+        setPictures([res.data]);
+        console.log(res.data);
       })
       .catch((e) => { 
         console.log(e);
+        console.log("asfkjabfkejbf");
       })
 
  };

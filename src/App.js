@@ -4,7 +4,6 @@ import { app_background } from "./data/markdown";
 
 // import your custom data fetching function
 // TODO: add a data fetching function to the api.js file in the endpoints folder
-import { getAllAvatarCharacters } from "./data/endpoints";
 import { getDogPictures } from "./data/endpoints";
 
 const App = () => {
@@ -42,17 +41,18 @@ const App = () => {
              * - otherwise, it maps through characters and renders info for each person!
              */}
             {pictures ? (
-              pictures.map((pic, idx) => (
+             pictures.map((pic, idx) => (
                 <div className="col-3 dog" key={idx}>
               
-                  {/* Displays image of each character + adds an additional class (character-img) so I can customize in my CSS file*/}
+                  {console.log(pic)}
                   <img
-                    src={pic.message}
+                    src={pic.image}
                     className="img-fluid character-img"
                     alt="dog"
                   ></img>
                 </div>
-              ))
+             
+             ))
             ) : (
               <div> No Dogs :-( </div>
             )}
